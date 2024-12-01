@@ -1,1 +1,1 @@
-from FantasyApi import FantasyApi
+from FantasyAPI import FantasyAPI

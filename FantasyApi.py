@@ -5,7 +5,7 @@ from .services.MarketService import MarketService
 from .managers.RequestManager import RequestManager
 from .managers.FileManager import FileManager
 
-class FantasyApi:
+class FantasyAPI:
     """
     Fantasy API
     """
