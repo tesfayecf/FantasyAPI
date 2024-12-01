@@ -1,6 +1,3 @@
-import json
-import numpy as np
-
 from .BaseService import BaseService
 
 class MarketService(BaseService):

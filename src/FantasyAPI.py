@@ -1,9 +1,9 @@
-from .services.PlayersService import PlayersService
-from .services.TeamsService import TeamsService
-from .services.MarketService import MarketService
+from src.services.PlayersService import PlayersService
+from src.services.TeamsService import TeamsService
+from src.services.MarketService import MarketService
 
-from .managers.RequestManager import RequestManager
-from .managers.FileManager import FileManager
+from src.managers.RequestManager import RequestManager
+from src.managers.FileManager import FileManager
 
 class FantasyAPI:
     """

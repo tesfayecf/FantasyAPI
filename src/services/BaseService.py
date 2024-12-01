@@ -1,4 +1,4 @@
-from ..common.utils.ApiConfig import api_config
+from common.utils.ApiConfig import api_config
 from ..managers.FileManager import FileManager
 
 class BaseService:
