@@ -1,4 +1,6 @@
+import os
 import json
+import chardet
 from .BaseService import BaseService
 
 class TeamsService(BaseService):
@@ -15,7 +17,11 @@ class TeamsService(BaseService):
             Exception: If 'common/teams.json' file is not found.
         """
         try:
-            with open('FantasyApi/common/static/teams.json') as f:
+            file_path = os.getcwd() + '/common/static/teams.json'
+            with open(file_path, 'rb') as f:
+                raw_data = f.read()
+                result = chardet.detect(raw_data)
+            with open(file_path, encoding=result['encoding']) as f:
                 self.teams = json.load(f)
         except Exception as e:
             raise Exception("No teams.json file found")

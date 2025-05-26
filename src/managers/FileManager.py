@@ -1,7 +1,11 @@
-import json, os, re, time, hashlib
+import os
+import re
+import json
+import time
+import hashlib
 
 from common.utils.DictStack import DictStack
-from .RequestManager import RequestManager
+from . import RequestManager
 
 class FileManager:
     """

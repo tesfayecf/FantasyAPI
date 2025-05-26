@@ -1,4 +1,6 @@
+import os
 import json
+import chardet
 import numpy as np
 import scipy.stats as stats
 
@@ -18,7 +20,11 @@ class PlayersService(BaseService):
             Exception: If 'common/players.json' file is not found.
         """
         try:
-            with open('FantasyApi/common/static/players.json') as f:
+            file_path = os.getcwd() + '/common/static/players.json'
+            with open(file_path, 'rb') as f:
+                raw_data = f.read()
+                result = chardet.detect(raw_data)
+            with open(file_path, encoding=result['encoding']) as f:
                 self.players = json.load(f)
         except Exception as e:
             raise Exception("No players.json file found")

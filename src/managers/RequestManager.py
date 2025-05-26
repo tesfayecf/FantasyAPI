@@ -1,6 +1,6 @@
 import requests
-from concurrent.futures import ThreadPoolExecutor
 from typing import Dict
+from concurrent.futures import ThreadPoolExecutor
 
 """
     # RequestManager Class
