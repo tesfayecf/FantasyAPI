@@ -1,0 +1,673 @@
+{
+	"info": {
+		"_postman_id": "",
+		"name": "Fantasy API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": ""
+	},
+	"item": [
+		{
+			"name": "App",
+			"item": [
+				{
+					"name": "Config",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/app/config/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"app",
+								"config",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "User Info",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}//api/v3/user/me",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"",
+								"api",
+								"v3",
+								"user",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Time",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v3/time",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"time"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Leagues",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v4/leagues",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v4",
+								"leagues"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Team",
+			"item": [
+				{
+					"name": "Team Info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api-fantasy.llt-services.com/api/v3/teams/{{TEAM_ID}}",
+							"protocol": "https",
+							"host": [
+								"api-fantasy",
+								"llt-services",
+								"com"
+							],
+							"path": [
+								"api",
+								"v3",
+								"teams",
+								"{{TEAM_ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Team Money",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api-fantasy.llt-services.com/api/v3/teams/{{TEAM_ID}}/money",
+							"protocol": "https",
+							"host": [
+								"api-fantasy",
+								"llt-services",
+								"com"
+							],
+							"path": [
+								"api",
+								"v3",
+								"teams",
+								"{{TEAM_ID}}",
+								"money"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Team Linuep",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api-fantasy.llt-services.com/api/v3/teams/{{TEAM_ID}}/lineup",
+							"protocol": "https",
+							"host": [
+								"api-fantasy",
+								"llt-services",
+								"com"
+							],
+							"path": [
+								"api",
+								"v3",
+								"teams",
+								"{{TEAM_ID}}",
+								"lineup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Team Lineup By Week",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api-fantasy.llt-services.com/api/v3/teams/{{TEAM_ID}}/lineup/week/{{WEEK_ID}}",
+							"protocol": "https",
+							"host": [
+								"api-fantasy",
+								"llt-services",
+								"com"
+							],
+							"path": [
+								"api",
+								"v3",
+								"teams",
+								"{{TEAM_ID}}",
+								"lineup",
+								"week",
+								"{{WEEK_ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Team Favourite Players",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api-fantasy.llt-services.com/api/v4/teams/{{TEAM_ID}}/favourite-players",
+							"protocol": "https",
+							"host": [
+								"api-fantasy",
+								"llt-services",
+								"com"
+							],
+							"path": [
+								"api",
+								"v4",
+								"teams",
+								"{{TEAM_ID}}",
+								"favourite-players"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "League",
+			"item": [
+				{
+					"name": "League Teams",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v3/leagues/{{LEAGUE_ID}}/teams",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"leagues",
+								"{{LEAGUE_ID}}",
+								"teams"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "League Teams By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v3/leagues/{{LEAGUE_ID}}/teams/{{TEAM_ID}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"leagues",
+								"{{LEAGUE_ID}}",
+								"teams",
+								"{{TEAM_ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "League Market",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v3/league/{{LEAGUE_ID}}/market",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"league",
+								"{{LEAGUE_ID}}",
+								"market"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "League Market Histroy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v3/league/{{LEAGUE_ID}}/market/history",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"league",
+								"{{LEAGUE_ID}}",
+								"market",
+								"history"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "League Ranking",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v5/leagues/{{LEAGUE_ID}}/ranking",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v5",
+								"leagues",
+								"{{LEAGUE_ID}}",
+								"ranking"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "League Raking By Week",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v5/leagues/{{LEAGUE_ID}}/ranking/{{WEEK_ID}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v5",
+								"leagues",
+								"{{LEAGUE_ID}}",
+								"ranking",
+								"{{WEEK_ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "League News",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v3/leagues/{{LEAGUE_ID}}/news",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"leagues",
+								"{{LEAGUE_ID}}",
+								"news"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "League News By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v3/leagues/{{LEAGUE_ID}}/news/{{WEEK_ID}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"leagues",
+								"{{LEAGUE_ID}}",
+								"news",
+								"{{WEEK_ID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Market",
+			"item": [
+				{
+					"name": "Actions",
+					"item": [
+						{
+							"name": "Market Make Bid",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"money\": 0}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/v3/league/{{LEAGUE_ID}}/market/{{OFFER_ID}}/bid",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v3",
+										"league",
+										"{{LEAGUE_ID}}",
+										"market",
+										"{{OFFER_ID}}",
+										"bid"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Market Cancel Bid",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/api/v3/league/{{LEAGUE_ID}}/market/{{OFFER_ID}}/bid/{{BID_ID}}/cancel",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v3",
+										"league",
+										"{{LEAGUE_ID}}",
+										"market",
+										"{{OFFER_ID}}",
+										"bid",
+										"{{BID_ID}}",
+										"cancel"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Market Immediate Sale",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"playerId\": \"\",\r\n    \"salePrice\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/v3/league/{{LEAGUE_ID}}/market/immediate-sale",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v3",
+										"league",
+										"{{LEAGUE_ID}}",
+										"market",
+										"immediate-sale"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Stats",
+					"item": []
+				}
+			]
+		},
+		{
+			"name": "Store",
+			"item": [
+				{
+					"name": "Store Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/classic/v1/store/products/user",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"classic",
+								"v1",
+								"store",
+								"products",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store Purchases",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/classic/v1/store/purchases/user",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"classic",
+								"v1",
+								"store",
+								"purchases",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store Consumables",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/classic/v1/store/user-consumable",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"classic",
+								"v1",
+								"store",
+								"user-consumable"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{AUTH_TOKEN}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "AUTH_TOKEN",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "BASE_URL",
+			"value": "https://api-fantasy.llt-services.com",
+			"type": "string"
+		},
+		{
+			"key": "WEEK_ID",
+			"value": "15",
+			"type": "string"
+		},
+		{
+			"key": "LEAGUE_ID",
+			"value": "0",
+			"type": "string"
+		},
+		{
+			"key": "TEAM_ID",
+			"value": "0",
+			"type": "string"
+		},
+		{
+			"key": "OFFER_ID",
+			"value": "0",
+			"type": "string"
+		},
+		{
+			"key": "BID_ID",
+			"value": "0",
+			"type": "string"
+		}
+	]
+}
